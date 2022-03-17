@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function phuongTrinhBacNhat(a, b) {
+
+        let result = 0;
+
+        if (a == 0 && b != 0) {
+            result = "Phương trình vô nghiệm"
+        } else if (a == 0 && b == 0) {
+            result = "Phuong trình có vô số nghiệm"
+        } else {
+            result = -b / a;
+        }
+
+        return result;
+    }
+
+    document.write(phuongTrinhBacNhat(5, 8));
+
+</script>
+
+</body>
+</html>

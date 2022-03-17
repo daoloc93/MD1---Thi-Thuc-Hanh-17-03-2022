@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let kyTuNguyenAm = ["a", "o", "e", "u", "i"]
+    let flag = false;
+    let count = 0;
+    let text = "hello"
+
+    function demKyTuNguyenAm(a) {
+        let textArray = a.split("");
+
+        for (let i = 0; i < textArray.length; i++) {
+            for (let j = 0; j < kyTuNguyenAm.length; j++) {
+                if (textArray[i] == kyTuNguyenAm[j]) {
+                    flag = true;
+                }
+            }
+            if (flag == true) {
+                count++;
+                flag = false;
+            }
+        }
+
+        if (count == 0) {
+            return false;
+        } else {
+            return count;
+        }
+    }
+
+    document.write(demKyTuNguyenAm(text));
+
+
+</script>
+
+</body>
+</html>
